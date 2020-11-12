@@ -1,0 +1,336 @@
+<app-header></app-header>
+<app-side-bar></app-side-bar>
+<div class="page-wrapper">
+  <!-- Contenedor -->
+  <div class="page-container">
+    <div class="main-content">
+      <div class="section__content section__content--p30">
+        <div class="container-fluid">
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <div class="overview-wrap">
+                <h2 class="title-1">Nuevos Productos</h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulario de Nuevo Producto. -->
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">
+                  <strong> Información </strong> del producto
+                </div>
+
+                <!-- Elementos del formulario. -->
+                <div class="card-body card-block">
+                  <form [formGroup]="ProfileForm" class="form-horizontal">
+                    <div class="row form-group">
+                      <div class="col col-md-3">
+                        <label class="form-control-label">
+                          ID de Producto:
+                        </label>
+                      </div>
+
+                      <div class="col-12 col-md-9">
+                        <p class="form-control-static">ID Product Value</p>
+                      </div>
+                    </div>
+
+                    <div class="row form-group">
+                      <div class="col col-md-3">
+                        <label for="text-input" class="form-control-label">
+                          Nombre del Producto:
+                        </label>
+                      </div>
+                      <div class="col-12 col-md-9">
+                        <input
+                          type="text"
+                          id="inputNombreProducto"
+                          name="inputNombreProducto"
+                          placeholder="Nombre del Producto"
+                          class="form-control"
+                          formControlName="nombre_producto"
+                          [(ngModel)]="producto.nombre_producto"
+                        />
+                        <small class="form-text text-muted">
+                          Ingresa el Nombre del Producto
+                        </small>
+                      </div>
+                    </div>
+
+                    <div class="row form-group">
+                      <div class="col col-md-3">
+                        <label for="text-input" class="form-control-label">
+                          Descripción del Producto
+                        </label>
+                      </div>
+                      <div class="col-12 col-md-9">
+                        <input
+                          type="text"
+                          id="inputDescripcionCorta"
+                          name="inputDescripcionCorta"
+                          placeholder="Descripción Corta del Producto"
+                          class="form-control"
+                          formControlName="descripcion_producto"
+                          [(ngModel)]="producto.descripcion_producto"
+                        />
+                        <small class="form-text text-muted">
+                          Ingresa una Descripción Corta del Producto
+                        </small>
+                      </div>
+                    </div>
+
+                    <div class="row form-group">
+                      <div class="col col-md-3">
+                        <label for="text-input" class="form-control-label">
+                          Descripción Detallada
+                        </label>
+                      </div>
+                      <div class="col-12 col-md-9">
+                        <textarea
+                          type="textarea-input"
+                          rows="9"
+                          id="inputDescripcionCompleta"
+                          name="inputDescripcionCompleta"
+                          placeholder="Descripción Completa del Producto"
+                          class="form-control"
+                          formControlName="descripcion_detallada"
+                          [(ngModel)]="producto.descripcion_detallada"
+                        ></textarea>
+                      </div>
+                    </div>
+
+                    <div class="row form-group">
+                      <div class="col col-md-3">
+                        <label for="text-input" class="form-control-label">
+                          Categoria:
+                        </label>
+                      </div>
+                      <div class="col-12 col-md-9">
+                        <select
+                          name="selectCategoria"
+                          id="selectCategoria"
+                          class="form-control-sm form-control"
+                          formControlName="categoria"
+                          [(ngModel)]="producto.categoria"
+                        >
+                          <option disabled value="0">
+                            Selecciona una Categoría
+                          </option>
+                          <option value="Antibacteriales">
+                            Antibacteriales
+                          </option>
+                          <option value="Higiene Personal">
+                            Higiene Personal
+                          </option>
+                          <option value="Higiene del Hoga">
+                            Higiene del Hoga
+                          </option>
+                          <option value="Mascotas">Mascotas</option>
+                          <option value="Infantiles">Infantiles</option>
+                          <option value="Hogar">Hogar</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row form-group">
+                      <div class="col col-md-3">
+                        <label for="text-input" class="form-control-label">
+                          Cantidad en Stock
+                        </label>
+                      </div>
+                      <div class="col-12 col-md-9">
+                        <input
+                          type="number"
+                          id="inputCantidadProducto"
+                          name="inputCantidadProducto"
+                          placeholder="Cantidad en Stock"
+                          class="form-control"
+                          formControlName="stock"
+                          [(ngModel)]="producto.stock"
+                        />
+                        <small class="form-text text-muted">
+                          Ingresa la Cantidad del Producto en Stock Inicial
+                        </small>
+                      </div>
+                    </div>
+
+                    <div class="row form-group">
+                      <div class="col col-md-3">
+                        <label for="text-input" class="form-control-label">
+                          Cantidad Límite
+                        </label>
+                      </div>
+                      <div class="col-12 col-md-9">
+                        <input
+                          type="number"
+                          id="inputCantidadLimite"
+                          name="inputCantidadLimite"
+                          placeholder="Cantidad Límite"
+                          class="form-control"
+                          formControlName="cantidad_limite"
+                          [(ngModel)]="producto.cantidad_limite"
+                        />
+                        <small class="form-text text-muted">
+                          Ingresa la Cantidad Menor del Límite
+                        </small>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="card-footer">
+                  <button (click)="enviar()" class="btn btn-primary btn-sm">
+                    Guardar Producto
+                  </button>
+
+                  <button
+                    type="reset"
+                    (click)="reset()"
+                    class="btn btn-danger btn-sm"
+                  >
+                    Limpiar el Formulario
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Formulario para cargar las imagenes de los productos. -->
+            <div class="col-lg-6">
+              <div class="card" [formGroup]="ProfileForm">
+                <div class="card-header">
+                  <strong> Fotografías del </strong> Producto
+                </div>
+
+                <div class="card-body card-block">
+                  <div class="row form-group">
+                    <div class="col col-md-3">
+                      <label for="file-input" class="form-control-label">
+                        Principal
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                      <input
+                        type="file"
+                        id="fileFotografiaPrincipal"
+                        name="fileFotografiaPrincipal"
+                        class="form-control-file"
+                        formControlName="img_principal"
+                        (change)="onChangeFileInput($event, 1)"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body card-block">
+                  <div class="row form-group">
+                    <div class="col col-md-3">
+                      <label for="file-input" class="form-control-label">
+                        Lateral Izquierda
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                      <input
+                        type="file"
+                        id="fileLatearlIzquierda"
+                        name="fileLateralIzquierda"
+                        class="form-control-file"
+                        formControlName="img_izquierda"
+                        (change)="onChangeFileInput($event, 2)"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body card-block">
+                  <div class="row form-group">
+                    <div class="col col-md-3">
+                      <label for="file-input" class="form-control-label">
+                        Lateral Derecha
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                      <input
+                        type="file"
+                        id="fileLatearlDerecha"
+                        name="fileLateralDerecha"
+                        class="form-control-file"
+                        formControlName="img_derecha"
+                        (change)="onChangeFileInput($event, 3)"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body card-block">
+                  <div class="row form-group">
+                    <div class="col col-md-3">
+                      <label for="file-input" class="form-control-label">
+                        General
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                      <input
+                        type="file"
+                        id="fileGeneral"
+                        name="fileGeneral"
+                        class="form-control-file"
+                        formControlName="img_general"
+                        (change)="onChangeFileInput($event, 4)"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Area de Vista Previa de las Imágenes. -->
+              <div class="card">
+                <div class="card-header">
+                  <strong> Vistas del </strong> Producto
+                </div>
+
+                <div class="card-body card-block">
+                  <ngb-carousel>
+                    <ng-template ngbSlide>
+                      <div class="picsum-img-wrapper">
+                        <img #img_principal />
+                      </div>
+                    </ng-template>
+                    <ng-template ngbSlide>
+                      <div class="picsum-img-wrapper">
+                        <img #img_izquierda />
+                      </div>
+                    </ng-template>
+                    <ng-template ngbSlide>
+                      <div class="picsum-img-wrapper">
+                        <img #img_derecha />
+                      </div>
+                    </ng-template>
+                    <ng-template ngbSlide>
+                      <div class="picsum-img-wrapper">
+                        <img #img_general />
+                      </div>
+                    </ng-template>
+                  </ngb-carousel>
+                  <!-- Aqui se deberán cargar las vistas de las imágenes de los productos seleccionados. -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="copyright">
+                <p>
+                  Copyright © 2020. All Rights Reseved
+                  <a href="http://www.lexsoftware.net">Lex Software México</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

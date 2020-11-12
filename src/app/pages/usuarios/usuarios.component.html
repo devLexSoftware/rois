@@ -1,0 +1,66 @@
+<app-header></app-header>
+<app-side-bar></app-side-bar>
+<div class="page-wrapper">
+  <!-- Contenedor -->
+  <div class="page-container">
+    <div class="main-content">
+      <div class="section__content section__content--p30">
+        <div class="container-fluid">
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <div class="overview-wrap">
+                <h2 class="title-1">Todos Usuarios del Sistema</h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tabla de usuarios en el sistema. -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="table-responsive table--no-card m-b-40">
+                <table
+                  class="table table-borderless table-striped table-earning"
+                >
+                  <!-- Nombre de las columnas para el listado de los usuarios. -->
+                  <thead>
+                    <tr>
+                      <th>ID Usuario</th>
+                      <th>Nombre(s)</th>
+                      <th>Apellido Paterno</th>
+                      <th>Apellido Materno</th>
+                      <th class="text-right">Correo Electrónico</th>
+                      <th class="text-right">Rol</th>
+                    </tr>
+                  </thead>
+
+                  <!-- Valores de la tabla. -->
+                  <tbody>
+                    <tr *ngFor="let user of users">
+                      <td>{{ user.id }}</td>
+                      <td>{{ user.nombre_usuario }}</td>
+                      <td>{{ user.apellido_paterno }}</td>
+                      <td>{{ user.apellido_materno }}</td>
+                      <td class="text-right">{{ user.email }}</td>
+                      <td class="text-right">{{ user.rol }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="copyright">
+                <p>
+                  Copyright © 2020. All Rights Reseved
+                  <a href="http://www.lexsoftware.net">Lex Software México</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

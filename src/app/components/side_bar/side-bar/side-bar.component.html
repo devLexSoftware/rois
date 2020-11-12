@@ -1,0 +1,118 @@
+<!-- Menú Lateral -->
+<aside class="menu-sidebar d-none d-lg-block">
+  <div class="logo">
+    <a href="#">
+      <img src="../../../../assets/images/icon/logo.png" alt="ROIS" />
+    </a>
+  </div>
+
+  <div class="menu-sidebar__content js-scrollbar1">
+    <nav class="navbar-sidebar">
+      <ul class="list-unstyled navbar__list">
+        <li class="active">
+          <a href="index.html"> <i class="fas fa-desktop"></i> Inicio </a>
+        </li>
+        <mat-accordion>
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <li class="has-sub">
+                  <a class="js-arrow">
+                    <i class="fas fa-shopping-cart"></i> Inventario
+                  </a>
+                </li>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="list-unstyled js-sub-list">
+              <li><a routerLink="/productos"> Todos los Productos </a></li>
+              <li><a routerLink="/inventario"> Nuevo Producto </a></li>
+            </ul>
+          </mat-expansion-panel>
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <li class="has-sub">
+                  <a class="js-arrow"> <i class="fas fa-truck"></i> Pedidos </a>
+                </li>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="list-unstyled js-sub-list">
+              <li><a href="TodosPedidos.html"> Todos los Pedidos </a></li>
+              <li><a href="PedidosPendientes.html"> Pendientes </a></li>
+              <li><a href="PedidosEnviados.html"> Enviados </a></li>
+              <li><a href="PedidosAtendidos.html"> Atendidos </a></li>
+            </ul>
+          </mat-expansion-panel>
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <li class="has-sub">
+                  <a class="js-arrow">
+                    <i class="fas fa-user"></i> Usurarios
+                  </a>
+                </li>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="list-unstyled js-sub-list">
+              <li><a routerLink="/usuarios"> Todos los Usuarios </a></li>
+              <li><a routerLink="/nuevo_usuario"> Nuevo Usuario </a></li>
+            </ul>
+          </mat-expansion-panel>
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <li class="has-sub">
+                  <a class="js-arrow">
+                    <i class="fas fa-users"></i> Clientes
+                  </a>
+                </li>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="list-unstyled js-sub-list">
+              <li><a routerLink="/clientes"> Todos los Clientes </a></li>
+              <li><a routerLink="/nuevo_cliente"> Nuevo Cliente </a></li>
+            </ul>
+          </mat-expansion-panel>
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <li class="has-sub">
+                  <a class="js-arrow"> <i class="fas fa-tags"></i> Ofertas </a>
+                </li>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="list-unstyled js-sub-list">
+              <li><a href="TodasOfertas.html"> Todas las Ofertas </a></li>
+              <li><a href="NuevaOferta.html"> Nueva Oferta</a></li>
+            </ul>
+          </mat-expansion-panel>
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <li class="has-sub">
+                  <a class="js-arrow">
+                    <i class="fas fa-bar-chart-o"></i> Reportes
+                  </a>
+                </li>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="list-unstyled js-sub-list">
+              <li><a href="ReporteVentas.html"> Reporte de Ventas </a></li>
+              <li><a href="ReporteSemanal.html"> Reporte Semanal </a></li>
+              <li><a href="ReporteMensual.html"> Reporte Mensual </a></li>
+              <li><a href="ReporteAnual.html"> Reporte Anual </a></li>
+            </ul>
+          </mat-expansion-panel>
+        </mat-accordion>
+
+        <li class="has-sub">
+          <a class="js-arrow" href="www.lexsoftware.net">
+            <i class="fas fa-laptop"></i> Soporte Técnico
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</aside>
+
+<!-- Final Barra Lateral-->

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "roise-1f430": {
+      "hosting": {
+        "roi": [
+          "roise-1f430"
+        ]
+      }
+    }
+  }
+}

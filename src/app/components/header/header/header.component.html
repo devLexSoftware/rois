@@ -1,0 +1,212 @@
+<!-- Header para vista en dispositivos móviles. -->
+<header class="header-mobile d-block d-lg-none">
+  <div class="header-mobile__bar">
+    <div class="container-fluid">
+      <div class="header-mobile-inner">
+        <a class="logo" href="index.html">
+          <img src="../../../../assets/images/icon/logo.png" alt="ROIS" />
+        </a>
+        <button class="hamburger hamburger--slider" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar-mobile">
+    <div class="container-fluid">
+      <ul class="navbar-mobile__list list-unstyled">
+        <li>
+          <a href="index.html"> <i class="fas fa-desktop"></i> Inicio </a>
+        </li>
+
+        <li class="has-sub">
+          <a class="js-arrow">
+            <i class="fas fa-shopping-cart"></i> Inventario
+          </a>
+
+          <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+            <li><a href="TodosProductos.html"> Todos los Productos </a></li>
+            <li><a href="NuevoProducto.html"> Nuevo Producto </a></li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a class="js-arrow" href="#">
+            <i class="fas fa-truck"></i> Pedidos
+          </a>
+
+          <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+            <li><a href="TodosPedidos.html"> Todos los Pedidos </a></li>
+            <li><a href="PedidosPendientes.html"> Pendientes </a></li>
+            <li><a href="PedidosEnviados.html"> Enviados </a></li>
+            <li><a href="PedidosAtendidos.html"> Atendidos </a></li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a class="js-arrow" href="#">
+            <i class="fas fa-user"></i> Usurarios
+          </a>
+
+          <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+            <li><a href="TodosUsuarios.html"> Todos los Usuarios </a></li>
+            <li><a href="NuevoUsuario.html"> Nuevo Usuario </a></li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a class="js-arrow" href="#">
+            <i class="fas fa-users"></i> Clientes
+          </a>
+
+          <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+            <li><a href="TodosCliente.html"> Todos los Clientes </a></li>
+            <li><a href="DetalleCliente.html"> Nuevo Cliente </a></li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a class="js-arrow" href="#"> <i class="fas fa-tags"></i> Ofertas </a>
+
+          <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+            <li><a href="TodasOfertas.html"> Todas las Ofertas </a></li>
+            <li><a href="NuevaOferta.html"> Nueva Oferta</a></li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a class="js-arrow" href="#">
+            <i class="fas fa-bar-chart-o"></i> Reportes
+          </a>
+
+          <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+            <li><a href="ReporteVentas.html"> Reporte de Ventas </a></li>
+            <li><a href="ReporteSemanal.html"> Reporte Semanal </a></li>
+            <li><a href="ReporteMensual.html"> Reporte Mensual </a></li>
+            <li><a href="ReporteAnual.html"> Reporte Anual </a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<!-- Finaliza Menú Móvil -->
+
+<header class="header-desktop">
+  <div class="section__content section__content--p30">
+    <div class="container-fluid">
+      <div class="header-wrap">
+        <!-- Barra de Búsqueda. -->
+        <form class="form-header" action="" method="POST">
+          <input
+            class="au-input au-input--xl"
+            type="text"
+            name="search"
+            placeholder="Buscar Producto"
+          />
+          <button class="au-btn--submit" type="submit">
+            <i class="zmdi zmdi-search"></i>
+          </button>
+        </form>
+
+        <!-- Seccion de elementos de barra superior.  -->
+        <div class="header-button">
+          <div class="noti-wrap">
+            <div class="noti__item js-item-menu">
+              <!-- Conteo de notificaciones. -->
+              <i class="zmdi zmdi-notifications"></i>
+              <span class="quantity"> 20 </span>
+
+              <div class="notifi-dropdown js-dropdown">
+                <div class="notifi__title">
+                  <p>Tienes 20 Notificaciones</p>
+                </div>
+
+                <!-- Notificaciones de Usuarios Nuevos en la E-Commerce. -->
+                <div class="notifi__item">
+                  <div class="bg-c2 img-cir img-40">
+                    <i class="zmdi zmdi-account-box"></i>
+                  </div>
+
+                  <div class="content">
+                    <p>10 Usuarios nuevos se han registrado</p>
+                  </div>
+                </div>
+
+                <!-- Notificaciones de Pedidos Nuevos en la E-Commerce. -->
+                <div class="notifi__item">
+                  <div class="bg-c3 img-cir img-40">
+                    <i class="zmdi zmdi-file-text"></i>
+                  </div>
+
+                  <div class="content">
+                    <p>10 Pedidos nuevos se encuentran en la E-Commerce.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sesión de Usuario Activa en el Dashboard. -->
+          <div class="account-wrap">
+            <div class="account-item clearfix js-item-menu">
+              <div class="image">
+                <img
+                  src="../../../../assets/images/icon/Avatar.jpg"
+                  alt="Administrador"
+                />
+              </div>
+
+              <div class="content">
+                <a class="js-acc-btn" href="#"> Administrador </a>
+              </div>
+
+              <div class="account-dropdown js-dropdown">
+                <div class="info clearfix">
+                  <div class="image">
+                    <a>
+                      <img
+                        src="../../../../assets/images/icon/Avatar.jpg"
+                        alt="Administrador"
+                      />
+                    </a>
+                  </div>
+
+                  <div class="content">
+                    <h5 class="name">
+                      <a href="#"> Administrador </a>
+                    </h5>
+                    <span class="email"> roisadmon@gmail.com</span>
+                  </div>
+                </div>
+
+                <div class="account-dropdown__body">
+                  <div class="account-dropdown__item">
+                    <a href="CambiarContraseña.html">
+                      <i class="zmdi zmdi-account"></i> Cambiar Contraseña
+                    </a>
+                  </div>
+
+                  <div class="account-dropdown__item">
+                    <a href="Soporte.html">
+                      <i class="zmdi zmdi-settings"></i> Soporte Técnico
+                    </a>
+                  </div>
+                </div>
+
+                <div class="account-dropdown__footer">
+                  <a href="Login.html">
+                    <i class="zmdi zmdi-power"></i> Cerrar Sesión
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

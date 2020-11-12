@@ -1,0 +1,68 @@
+<app-header></app-header>
+<app-side-bar></app-side-bar>
+<div class="page-wrapper">
+  <!-- Contenedor -->
+  <div class="page-container">
+    <div class="main-content">
+      <div class="section__content section__content--p30">
+        <div class="container-fluid">
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <div class="overview-wrap">
+                <h2 class="title-1">Todos los Clientes</h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tabla de productos en el inventario. -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="table-responsive table--no-card m-b-40">
+                <table
+                  class="table table-borderless table-striped table-earning"
+                >
+                  <!-- Nombre de las columnas pedidos pendientes. -->
+                  <thead>
+                    <tr>
+                      <th>ID Cliente</th>
+                      <th>Nombre</th>
+                      <th>Apellido Paterno</th>
+                      <th class="text-right">Apellido Materno</th>
+                      <th class="text-right">Email</th>
+                      <th class="text-right">Teléfono</th>
+                    </tr>
+                  </thead>
+
+                  <!-- Valores de la tabla. -->
+                  <tbody>
+                    <tr *ngFor="let cliente of clientes">
+                      <td>{{ cliente.id }}</td>
+                      <td>{{ cliente.nombre_usuario }}</td>
+                      <td>{{ cliente.apellido_paterno }}</td>
+                      <td class="text-right">
+                        {{ cliente.apellido_materno }}
+                      </td>
+                      <td class="text-right">{{ cliente.email }}</td>
+                      <td class="text-right">{{ cliente.telefono }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="copyright">
+                <p>
+                  Copyright © 2020. All Rights Reseved
+                  <a href="http://www.lexsoftware.net">Lex Software México</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

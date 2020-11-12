@@ -1,0 +1,17 @@
+.mat-accordion .mat-expansion-panel {
+  border-radius: none;
+  background: white;
+  box-shadow: none;
+}
+
+.mat-expansion-panel-header {
+  padding: 0;
+}
+
+.navbar-sidebar .navbar__list li a {
+  color: #464646 !important;
+}
+
+.navbar-sidebar .navbar__list li.active > a {
+  color: #4272d7 !important;
+}

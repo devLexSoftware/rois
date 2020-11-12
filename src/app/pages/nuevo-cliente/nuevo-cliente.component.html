@@ -1,0 +1,174 @@
+<app-header></app-header>
+<app-side-bar></app-side-bar>
+<div class="page-wrapper">
+  <!-- Contenedor -->
+  <div class="page-container">
+    <div class="main-content">
+      <div class="section__content section__content--p30">
+        <div class="container-fluid">
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <div class="overview-wrap">
+                <h2 class="title-1">Nuevo Cliente</h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulario de Nuevo Usuario. -->
+          <div class="row">
+            <div class="col-lg-9">
+              <div class="card">
+                <div class="card-header">
+                  <strong> Información </strong> del Nuevo Cliente
+                </div>
+
+                <!-- Elementos del formulario. -->
+                <div class="card-body card-block">
+                  <div class="row form-group">
+                    <div class="col col-md-3">
+                      <label class="form-control-label"> ID de Cliente: </label>
+                    </div>
+
+                    <div class="col-12 col-md-9">
+                      <p class="form-control-static">Valor ID Cliente</p>
+                      <!-- Autogenerado. -->
+                    </div>
+                  </div>
+
+                  <div class="row form-group">
+                    <div class="col col-md-3">
+                      <label for="text-input" class="form-control-label">
+                        Nombre(s):
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                      <input
+                        type="text"
+                        id="inputNombreUsuario"
+                        name="inputNombreUsuario"
+                        placeholder="Nombre(s)"
+                        class="form-control"
+                        [(ngModel)]="cliente.nombre_usuario"
+                      />
+                      <small class="form-text text-muted">
+                        Ingresa el Nombre(s) del Cliente
+                      </small>
+                    </div>
+                  </div>
+
+                  <div class="row form-group">
+                    <div class="col col-md-3">
+                      <label for="text-input" class="form-control-label">
+                        Apellido Paterno:
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                      <input
+                        type="text"
+                        id="inputApPatUsuario"
+                        name="inputApPatUsuario"
+                        placeholder="Apellido Paterno"
+                        class="form-control"
+                        [(ngModel)]="cliente.apellido_paterno"
+                      />
+                      <small class="form-text text-muted">
+                        Ingresa el Apellido Paterno del Cliente
+                      </small>
+                    </div>
+                  </div>
+
+                  <div class="row form-group">
+                    <div class="col col-md-3">
+                      <label for="text-input" class="form-control-label">
+                        Apellido Materno:
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                      <input
+                        type="text"
+                        id="inputApMatUsuario"
+                        name="inputApMatUsuario"
+                        placeholder="Apellido Materno"
+                        class="form-control"
+                        [(ngModel)]="cliente.apellido_materno"
+                      />
+                      <small class="form-text text-muted">
+                        Ingresa el Apellido Materno del Cliente
+                      </small>
+                    </div>
+                  </div>
+
+                  <div class="row form-group">
+                    <div class="col col-md-3">
+                      <label for="text-input" class="form-control-label">
+                        Correo Electrónico
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                      <input
+                        type="text"
+                        id="inputCorreoUsuario"
+                        name="inputCorreoUsuario"
+                        placeholder="Correo Electrónico"
+                        class="form-control"
+                        [(ngModel)]="cliente.email"
+                      />
+                      <small class="form-text text-muted">
+                        Ingresa el Correo Electrónico del Cliente
+                      </small>
+                    </div>
+                  </div>
+
+                  <div class="row form-group">
+                    <div class="col col-md-3">
+                      <label for="text-input" class="form-control-label">
+                        Número de teléfono"
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                      <input
+                        type="text"
+                        placeholder="Número de teléfono"
+                        class="form-control"
+                        [(ngModel)]="cliente.telefono"
+                      />
+                      <small class="form-text text-muted">
+                        Ingresa el Número de teléfono del Cliente
+                      </small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <button (click)="enviar()" class="btn btn-primary btn-sm">
+                    Guardar Usuario
+                  </button>
+
+                  <button
+                    (click)="reset()"
+                    type="reset"
+                    class="btn btn-danger btn-sm"
+                  >
+                    Limpiar el Formulario
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="copyright">
+                <p>
+                  Copyright © 2020. All Rights Reseved
+                  <a href="http://www.lexsoftware.net">Lex Software México</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Termina el contenedor. -->
+  </div>
+</div>

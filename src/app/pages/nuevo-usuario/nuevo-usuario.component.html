@@ -1,0 +1,228 @@
+<app-header></app-header>
+<app-side-bar></app-side-bar>
+<div class="page-wrapper">
+  <!-- Contenedor -->
+  <div class="page-container">
+    <div class="main-content">
+      <div class="section__content section__content--p30">
+        <div class="container-fluid">
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <div class="overview-wrap">
+                <h2 class="title-1">Nuevo Usuario</h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulario de Nuevo Usuario. -->
+          <div class="row">
+            <div class="col-lg-9">
+              <div class="card">
+                <div class="card-header">
+                  <strong> Información </strong> del Nuevo Usuario
+                </div>
+
+                <!-- Elementos del formulario. -->
+                <div class="card-body card-block">
+                  <form [formGroup]="UsuarioForm" class="form-horizontal">
+                    <div class="row form-group">
+                      <div class="col col-md-3">
+                        <label class="form-control-label">
+                          ID de Usuario:
+                        </label>
+                      </div>
+
+                      <div class="col-12 col-md-9">
+                        <p class="form-control-static">Valor ID Usuario</p>
+                        <!-- Autogenerado. -->
+                      </div>
+                    </div>
+
+                    <div class="row form-group">
+                      <div class="col col-md-3">
+                        <label for="text-input" class="form-control-label">
+                          Nombre(s):
+                        </label>
+                      </div>
+                      <div class="col-12 col-md-9">
+                        <input
+                          type="text"
+                          id="inputNombreUsuario"
+                          name="inputNombreUsuario"
+                          placeholder="Nombre(s)"
+                          class="form-control"
+                          formControlName="nombre_usuario"
+                          [(ngModel)]="usuario.nombre_usuario"
+                        />
+                        <small class="form-text text-muted">
+                          Ingresa el Nombre(s) del Usuario
+                        </small>
+                      </div>
+                    </div>
+
+                    <div class="row form-group">
+                      <div class="col col-md-3">
+                        <label for="text-input" class="form-control-label">
+                          Apellido Paterno:
+                        </label>
+                      </div>
+                      <div class="col-12 col-md-9">
+                        <input
+                          type="text"
+                          id="inputApPatUsuario"
+                          name="inputApPatUsuario"
+                          placeholder="Apellido Paterno"
+                          class="form-control"
+                          formControlName="apellido_paterno"
+                          [(ngModel)]="usuario.apellido_paterno"
+                        />
+                        <small class="form-text text-muted">
+                          Ingresa el Apellido Paterno del Usuario
+                        </small>
+                      </div>
+                    </div>
+
+                    <div class="row form-group">
+                      <div class="col col-md-3">
+                        <label for="text-input" class="form-control-label">
+                          Apellido Materno:
+                        </label>
+                      </div>
+                      <div class="col-12 col-md-9">
+                        <input
+                          type="text"
+                          id="inputApMatUsuario"
+                          name="inputApMatUsuario"
+                          placeholder="Apellido Materno"
+                          class="form-control"
+                          formControlName="apellido_materno"
+                          [(ngModel)]="usuario.apellido_materno"
+                        />
+                        <small class="form-text text-muted">
+                          Ingresa el Apellido Materno del Usuario
+                        </small>
+                      </div>
+                    </div>
+
+                    <div class="row form-group">
+                      <div class="col col-md-3">
+                        <label for="text-input" class="form-control-label">
+                          Correo Electrónico
+                        </label>
+                      </div>
+                      <div class="col-12 col-md-9">
+                        <input
+                          type="text"
+                          id="inputCorreoUsuario"
+                          name="inputCorreoUsuario"
+                          placeholder="Correo Electrónico"
+                          class="form-control"
+                          formControlName="email"
+                          [(ngModel)]="usuario.email"
+                        />
+                        <small class="form-text text-muted">
+                          Ingresa el Correo Electrónico del Usuario
+                        </small>
+                      </div>
+                    </div>
+
+                    <div class="row form-group">
+                      <div class="col col-md-3">
+                        <label for="text-input" class="form-control-label">
+                          Contraseña:
+                        </label>
+                      </div>
+                      <div class="col-12 col-md-9">
+                        <input
+                          type="text"
+                          id="inputContraseñaUsuario"
+                          name="inputContraseñaUsuario"
+                          placeholder="Contraseña"
+                          class="form-control"
+                          formControlName="password"
+                          [(ngModel)]="usuario.password"
+                        />
+                        <small class="form-text text-muted">
+                          Ingresa la Contraseña del Usuario
+                        </small>
+                      </div>
+                    </div>
+
+                    <div class="row form-group">
+                      <div class="col col-md-3">
+                        <label for="text-input" class="form-control-label">
+                          Confirmar la Contraseña:
+                        </label>
+                      </div>
+                      <div class="col-12 col-md-9">
+                        <input
+                          type="text"
+                          id="inputConfirmarContraseñaUsuario"
+                          name="inputConfirmarContraseñaUsuario"
+                          placeholder="Confirmar Contraseña"
+                          class="form-control"
+                          formControlName="re_password"
+                        />
+                        <small class="form-text text-muted">
+                          Ingresa la Confirmación de la Contraseña del Usuario
+                        </small>
+                      </div>
+                    </div>
+
+                    <div class="row form-group">
+                      <div class="col col-md-3">
+                        <label for="text-input" class="form-control-label">
+                          Rol:
+                        </label>
+                      </div>
+                      <div class="col-12 col-md-9">
+                        <select
+                          name="selectRolUsuario"
+                          id="selectRolUsuari"
+                          class="form-control-sm form-control"
+                          formControlName="rol"
+                          [(ngModel)]="usuario.rol"
+                        >
+                          <option value="0">Selecciona un Rol</option>
+                          <option value="1">Administrador</option>
+                          <option value="2">Editor</option>
+                          <option value="3">Atención de Pedidos</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="card-footer">
+                  <button (click)="enviar()" class="btn btn-primary btn-sm">
+                    Guardar Usuario
+                  </button>
+
+                  <button
+                    (click)="reset()"
+                    type="reset"
+                    class="btn btn-danger btn-sm"
+                  >
+                    Limpiar el Formulario
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="copyright">
+                <p>
+                  Copyright © 2020. All Rights Reseved
+                  <a href="http://www.lexsoftware.net">Lex Software México</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Termina el contenedor. -->
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="login">
+  <h3>Inicia sesión</h3>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="input-item">
+      <label for="">Correo electroníco</label>
+      <input
+        email
+        name="email"
+        type="email"
+        placeholder="tu@correo.com"
+        [(ngModel)]="usuario.correo"
+      />
+    </div>
+    <div class="input-item">
+      <label for="">Contraseña</label>
+      <input
+        type="password"
+        placeholder="contraseña"
+        name="password"
+        [(ngModel)]="usuario.password"
+      />
+    </div>
+    <button class="correo_submit btn" type="submit">
+      <span>Iniciar sesión</span>
+    </button>
+  </form>
+</div>
